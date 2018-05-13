@@ -1,0 +1,53 @@
+/* Show cursor when hover */
+.clickable {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+/* Remove link style for anchor */
+a.unlink {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.mb {
+  margin-bottom: $b-space;
+
+  &-xs {
+    margin-bottom: $b-space-xs;
+  }
+
+  &-s {
+    margin-bottom: $b-space-s;
+  }
+
+  &-lg {
+    margin-bottom: $b-space-l;
+  }
+
+  &-xl {
+    margin-bottom: $b-space-xl;
+  }
+}
+
+.mt {
+  margin-top: $b-space;
+
+  &-xs {
+    margin-top: $b-space-xs;
+  }
+
+  &-s {
+    margin-top: $b-space-s;
+  }
+
+  &-lg {
+    margin-top: $b-space-l;
+  }
+
+  &-xl {
+    margin-top: $b-space-xl;
+  }
+}

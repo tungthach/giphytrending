@@ -1,0 +1,10 @@
+export const ON_FOCUS = 'onFocus';
+export const ON_BLUR = 'onBlur';
+export const ON_CLICK = 'onClick';
+export const ON_CHANGE = 'onChange';
+export const ON_INPUT = 'onInput';
+export const ON_SUBMIT = 'onSubmit';
+export const ON_KEY_DOWN = 'onKeyDown';
+export const ON_KEY_PRESS = 'onKeyPress';
+export const ON_KEY_UP = 'onKeyUp';
+export const KEY_EVENTS = [ON_KEY_DOWN, ON_KEY_PRESS, ON_KEY_UP];

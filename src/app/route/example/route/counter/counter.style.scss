@@ -1,0 +1,9 @@
+@import 'style/foundation/config';
+
+.counter {
+  &__buttons {
+    > div {
+      margin-right: $b-space!important;
+    }
+  }
+}

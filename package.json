@@ -7,14 +7,31 @@
   },
   "main": "server/index.js",
   "scripts": {
-    "dev": "better-npm-run dev",
     "build": "better-npm-run build",
+    "start": "better-npm-run prod",
     "prod": "better-npm-run prod",
-    "test": "better-npm-run test",
+    "dev": "better-npm-run dev",
+    "dist": "better-npm-run dist",
     "coverage": "better-npm-run coverage",
-    "lint": "./node_modules/.bin/eslint --fix -c .eslintrc src || true"
+    "core-coverage": "better-npm-run core-coverage",
+    "test": "better-npm-run test",
+    "core-test": "better-npm-run core-test",
+    "lint": "./node_modules/.bin/eslint --fix -c .eslintrc src || true",
+    "postinstall": "better-npm-run postinstall"
   },
   "betterScripts": {
+    "core-test": {
+      "command": "karma start config/karma/core.js",
+      "env": {
+        "NODE_ENV": "test-debug"
+      }
+    },
+    "core-coverage": {
+      "command": "karma start config/karma/core.js",
+      "env": {
+        "NODE_ENV": "test"
+      }
+    },
     "test": {
       "command": "karma start config/karma/app.js",
       "env": {
@@ -45,6 +62,18 @@
       "env": {
         "NODE_ENV": "production"
       }
+    },
+    "dist": {
+      "command": "npm run build",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "pretinstall": {
+      "command": "git config --global http.sslVerify false"
+    },
+    "postinstall": {
+      "command": "git config --global http.sslVerify true"
     }
   },
   "dependencies": {
@@ -53,6 +82,7 @@
     "bundle-loader": "0.5.5",
     "classnames": "2.2.5",
     "custom-event-polyfill": "0.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "history": "4.7.2",
     "immutable": "3.8.2",
     "lodash": "4.17.4",

@@ -1,6 +1,3 @@
-# Simple load Giphy Trending
-Load giphy trending images.
-
 ### 1. Make sure you've installed:
 > Nodejs [Download]((https://nodejs.org/en/download/)
 
@@ -27,7 +24,7 @@ npm run build
 ```
 
 ### 6. Site
-Development site url: http://localhost:8000/
+Super Administrator site url: http://localhost:8001/
 
 #### a. Run in Dev mode
 ```bash
@@ -54,3 +51,20 @@ For debugging, opent this url on chrome: http://localhost:9001/debug.html
 npm run coverage
 ```
 Code coverage folder: **/coverage/app/**
+
+### 7. Core project
+#### a. Unit test
+**For Developer**
+Should use this command to run unit test, because it doesn't uglify javascript code.
+
+```bash
+npm run core-test
+```
+For debugging, opent this url on chrome: http://localhost:9002/debug.html
+*Note: this command doesn't generate code coverage*
+
+ **For CI tool**
+```bash
+npm run core-coverage
+```
+Code coverage folder: **/coverage/core/**

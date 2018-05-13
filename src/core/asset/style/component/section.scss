@@ -1,0 +1,38 @@
+/*======================================
+
+  Section Module
+    -> Descriptions
+
+======================================*/
+
+$section-padding: $b-space-l;
+
+/* ----- Section Header ----- */
+.section {
+  padding: $b-space;
+
+  &__header {
+    margin-bottom: $b-space;
+    font-weight: 700;
+  }
+
+  /* ----- Section Title ----- */
+  &__title {
+    margin: $section-padding;
+
+    &--center {
+      text-align: center;
+    }
+  }
+
+  /* ----- Section Content ----- */
+  &__content {
+    @include clearfix();
+
+    padding: $b-space-l;
+
+    &-description {
+      margin-bottom: $b-space-l;
+    }
+  }
+}

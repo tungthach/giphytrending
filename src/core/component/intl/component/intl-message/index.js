@@ -1,0 +1,1 @@
+export { IntlMessage } from './intl-message.component';

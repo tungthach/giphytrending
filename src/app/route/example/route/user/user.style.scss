@@ -1,0 +1,9 @@
+@import 'style/foundation/config';
+
+.user {
+  &__buttons {
+    > div {
+      margin-right: $b-space!important;
+    }
+  }
+}

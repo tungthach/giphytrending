@@ -1,0 +1,25 @@
+/*--------------------------------------
+  Em - Converts pixel value to an em
+--------------------------------------*/
+
+// $target - the target pixel size
+// $context - the context font-size
+@function px2em($target, $context: 16px) {
+  @if ($target==0) {
+    @return 0;
+  }
+  @else {
+    @return ($target / $context) * 1em;
+  }
+}
+
+// $target - the target em size
+// $context - the context font-size
+@function em2px($target, $context: 16px) {
+  @if ($target==0) {
+    @return 0;
+  }
+  @else {
+    @return ($target / 1em) * $context;
+  }
+}
