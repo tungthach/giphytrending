@@ -4,13 +4,12 @@ import classNames from 'classnames/bind';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
-import Explicit from 'material-ui/svg-icons/av/explicit';
 import Dashboard from 'material-ui/svg-icons/action/dashboard';
 import Business from 'material-ui/svg-icons/communication/business';
 
 import { renderRoutes, IntlMessage } from 'core';
 
-import { URL_DASHBOARD, URL_ABOUT, URL_EXAMPLE } from './app.constant';
+import { URL_DASHBOARD, URL_ABOUT } from './app.constant';
 
 import './app.style';
 
@@ -18,7 +17,6 @@ import './app.style';
  * The menu items
  */
 const menus = [
-  { to: URL_EXAMPLE, intlKey: 'example', icon: <Explicit /> },
   { to: URL_DASHBOARD, intlKey: 'dashboard', icon: <Dashboard /> },
   { to: URL_ABOUT, intlKey: 'about', icon: <Business /> }
 ];
