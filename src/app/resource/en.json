@@ -1,0 +1,16 @@
+{
+  "about": "About",
+  "appTitle": "Load Giphy Trending",
+  "counter": "Counter",
+  "counterRedux": "Counter with Redux",
+  "dashboard": "Dashboard",
+  "email": "Email",
+  "emailInvalid": "Email format is invalid",
+  "example": "Example",
+  "examples": "Examples",
+  "fieldRequired": "{field} is required",
+  "home": "Home",
+  "login": "Login",
+  "user": "User",
+  "userRedux": "User with Redux"
+}

@@ -1,0 +1,1 @@
+export { localDataService } from './local-data.service';

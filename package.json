@@ -1,0 +1,189 @@
+{
+  "name": "giphytrending",
+  "version": "1.0.0",
+  "description": "ReactJS - Redux - ES6+ - RxJS - Webpack Application",
+  "author": {
+    "name": "Tung Thach"
+  },
+  "main": "server/index.js",
+  "scripts": {
+    "build": "better-npm-run build",
+    "start": "better-npm-run prod",
+    "prod": "better-npm-run prod",
+    "dev": "better-npm-run dev",
+    "dist": "better-npm-run dist",
+    "coverage": "better-npm-run coverage",
+    "core-coverage": "better-npm-run core-coverage",
+    "test": "better-npm-run test",
+    "core-test": "better-npm-run core-test",
+    "lint": "./node_modules/.bin/eslint --fix -c .eslintrc src || true",
+    "postinstall": "better-npm-run postinstall"
+  },
+  "betterScripts": {
+    "core-test": {
+      "command": "karma start config/karma/core.js",
+      "env": {
+        "NODE_ENV": "test-debug"
+      }
+    },
+    "core-coverage": {
+      "command": "karma start config/karma/core.js",
+      "env": {
+        "NODE_ENV": "test"
+      }
+    },
+    "test": {
+      "command": "karma start config/karma/app.js",
+      "env": {
+        "NODE_ENV": "test-debug"
+      }
+    },
+    "coverage": {
+      "command": "karma start config/karma/app.js",
+      "env": {
+        "NODE_ENV": "test"
+      }
+    },
+    "dev": {
+      "command": "node --inspect=8200 server/app/index.js",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    "build": {
+      "command": "webpack --progress --optimize-minimize --config config/webpack/index.js",
+      "env": {
+        "NODE_ENV": "production",
+        "BUILD": true
+      }
+    },
+    "prod": {
+      "command": "npm run build && node server/app/index.js",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "dist": {
+      "command": "npm run build",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "pretinstall": {
+      "command": "git config --global http.sslVerify false"
+    },
+    "postinstall": {
+      "command": "git config --global http.sslVerify true"
+    }
+  },
+  "dependencies": {
+    "basic-auth": "2.0.0",
+    "body-parser": "1.18.2",
+    "bundle-loader": "0.5.5",
+    "classnames": "2.2.5",
+    "custom-event-polyfill": "0.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "history": "4.7.2",
+    "immutable": "3.8.2",
+    "lodash": "4.17.4",
+    "material-ui": "0.20.0",
+    "pluralize": "7.0.0",
+    "prop-types": "15.6.0",
+    "query-string": "5.0.1",
+    "react": "16.2.0",
+    "react-clipboard.js": "1.1.3",
+    "react-dom": "16.2.0",
+    "react-immutable-proptypes": "2.1.0",
+    "react-redux": "5.0.6",
+    "react-router": "4.2.0",
+    "react-router-dom": "4.2.2",
+    "react-router-redux": "5.0.0-alpha.6",
+    "react-tap-event-plugin": "3.0.2",
+    "react-transition-group": "2.2.1",
+    "redux": "3.7.2",
+    "redux-immutable": "4.0.0",
+    "redux-observable": "0.17.0",
+    "reselect": "3.0.1",
+    "rxjs": "5.5.6",
+    "smoothscroll-polyfill": "0.4.0",
+    "string-format": "0.5.0"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "3.2.0",
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-eslint": "8.2.1",
+    "babel-loader": "7.1.2",
+    "babel-plugin-istanbul": "4.1.5",
+    "babel-plugin-transform-decorators-legacy": "1.3.4",
+    "babel-plugin-transform-react-constant-elements": "6.23.0",
+    "babel-plugin-transform-react-inline-elements": "6.22.0",
+    "babel-plugin-transform-runtime": "6.23.0",
+    "babel-polyfill": "6.26.0",
+    "babel-preset-airbnb": "2.4.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-es2017": "6.24.1",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-react-hmre": "1.1.1",
+    "babel-preset-stage-0": "6.24.1",
+    "babel-runtime": "6.26.0",
+    "better-npm-run": "0.1.0",
+    "chai": "4.1.2",
+    "chai-immutable": "1.6.0",
+    "circular-dependency-plugin": "4.4.0",
+    "clean-webpack-plugin": "0.1.17",
+    "compression": "1.7.1",
+    "copy-webpack-plugin": "4.3.1",
+    "css-loader": "0.28.9",
+    "enzyme": "3.3.0",
+    "enzyme-redux": "0.1.7",
+    "eslint": "4.16.0",
+    "eslint-plugin-react": "7.5.1",
+    "express": "4.16.2",
+    "extract-text-webpack-plugin": "3.0.2",
+    "file-loader": "1.1.6",
+    "html-webpack-plugin": "2.30.1",
+    "istanbul-instrumenter-loader": "3.0.0",
+    "karma": "2.0.0",
+    "karma-chai": "0.1.0",
+    "karma-chai-immutable": "1.0.3",
+    "karma-chrome-launcher": "2.2.0",
+    "karma-coverage": "1.1.1",
+    "karma-coverage-istanbul-reporter": "1.4.0",
+    "karma-mocha": "1.3.0",
+    "karma-mocha-reporter": "2.2.5",
+    "karma-phantomjs-launcher": "1.0.4",
+    "karma-sinon-chai": "1.3.3",
+    "karma-sourcemap-loader": "0.3.7",
+    "karma-webpack": "2.0.9",
+    "merge": "1.2.0",
+    "mocha": "5.0.0",
+    "mocha-testdata": "1.2.0",
+    "node-sass": "4.7.2",
+    "phantomjs-prebuilt": "2.1.16",
+    "react-test-renderer": "16.2.0",
+    "redux-devtools": "3.4.1",
+    "redux-devtools-dock-monitor": "1.1.3",
+    "redux-devtools-inspector": "0.11.3",
+    "redux-mock-store": "1.4.0",
+    "sass-loader": "6.0.6",
+    "sinon": "4.2.1",
+    "sinon-chai": "2.14.0",
+    "style-loader": "0.19.1",
+    "url-loader": "0.6.2",
+    "webpack": "3.10.0",
+    "webpack-browser-plugin": "1.0.20",
+    "webpack-dev-middleware": "2.0.4",
+    "webpack-hot-middleware": "2.21.0",
+    "webpack-merge": "4.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tungthach/giphytrending.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tungthach/giphytrending/issues"
+  },
+  "homepage": "https://github.com/tungthach/giphytrending#readme"
+}

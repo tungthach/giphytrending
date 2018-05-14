@@ -1,0 +1,40 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: $b-fontFamily;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+  font-family: $b-fontFamily;
+  font-weight: 500;
+}
+
+main, article, aside, figure, footer, header, nav, section, details, summary {
+  display: block;
+}
+
+img, object, embed {
+  max-width: 100%;
+}
+
+pre {
+  white-space: pre; // CSS2 //
+  white-space: pre-wrap; // CSS 2.1 //
+  word-wrap: break-word; // IE //
+}
+
+a, area, button, [role="button"], input, label, select, summary, textarea {
+  touch-action: manipulation;
+}
+
+// P tag
+p {
+  margin: 0;
+}

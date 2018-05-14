@@ -1,0 +1,29 @@
+{
+    "presets": [
+      [
+        "es2015",
+        { "modules": false }
+      ],
+      "es2017",
+      "react",
+      "stage-0"
+    ],
+    "plugins": [
+      "transform-decorators-legacy",
+      [
+        "transform-runtime",
+        {
+          "polyfill": false,
+          "regenerator": true
+        }
+      ]
+    ],
+    "env": {
+      "production": {
+        "plugins": [
+          "transform-react-inline-elements",
+          "transform-react-constant-elements"
+        ]
+      }
+    }
+  }
