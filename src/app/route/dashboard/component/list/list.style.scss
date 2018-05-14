@@ -1,0 +1,33 @@
+@import 'style/foundation/config';
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .list {
+    .item {
+      flex-basis: 33.3%;
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .list {
+    .item {
+      flex-basis: 50%;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .list {
+    .item {
+      flex-basis: 100%;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+/*======================================
+
+  Utility Mixins
+    -> Descriptions
+
+======================================*/
+
+
+/* ----- Rotate ----- */
+
+@mixin rotateZ($degrees) {
+  -webkit-transform: rotateZ($degrees);
+  -ms-transform: rotateZ($degrees);
+  -o-transform: rotateZ($degrees);
+  transform: rotateZ($degrees);
+}
+
+
+/* ----- Transition ----- */
+
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+
+/* ----- Center-align a block level element ----- */
+
+@mixin center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  float: none !important;
+}
+
+
+/* ----- Clearfix ----- */
+
+@mixin clearfix() {
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+/* ----- Responsive utilities ----- */
+
+@mixin responsive-visibility($parent) {
+  #{$parent} {
+    display: block !important;
+  }
+  table#{$parent} {
+    display: table !important;
+  }
+  tr#{$parent} {
+    display: table-row !important;
+  }
+  th#{$parent}, td#{$parent} {
+    display: table-cell !important;
+  }
+}
+
+// $parent hack
+@mixin responsive-invisibility($parent) {
+  #{$parent} {
+    display: none !important;
+  }
+}
+
+
+/*--------------------------------------
+  Named Breakpoints are xs = phone, sm = tablet-portrait, md = tablet-landscape-desktop, lg = large-desktop
+--------------------------------------*/
+
+@mixin respond-to($media) {
+  /* ----- Landscape phones and down : < 768px ----- */
+  @if $media==xs {
+    @media (max-width: $screen-xs-max) {
+      @content;
+    }
+  }
+  /* ----- Landscape phone to portrait tablet : >= 768px, < 992px ----- */
+  @else if $media==sm {
+    @media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+      @content;
+    }
+  }
+  /* ----- Portrait tablet to landscape and desktop: >= 992px, < 1200px ----- */
+  @else if $media==md {
+    @media (min-width: $screen-md) and (max-width: $screen-md-max) {
+      @content;
+    }
+  }
+  /* ----- Desktop and large desktop : >= 1200px ----- */
+  @else if $media==lg {
+    @media (min-width: $screen-lg) {
+      @content;
+    }
+  }
+  // Specific max width
+  @else {
+    @media only screen and (max-width: #{$media}px) {
+      @content;
+    }
+  }
+}
+
+
+/*--------------------------------------
+  Example Usage:
+    - For single breakpoint
+    @include respondto (lg) {
+      height: 2em;
+    }
+    - For multiple breakpoint
+    @include respondto (xs, sm, md) {
+      height: 2em;
+    }
+    - For custom breakpoint
+    @include respondto (1600) {
+      height: 2em;
+    }
+--------------------------------------*/
+
+@mixin respondto($media...) {
+  @each $mediatype in $media {
+    @include respond-to($mediatype) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,509 @@
+/*--------------------------------------
+  Animation duration
+--------------------------------------*/
+.speed-xs {
+  @include animationDuration($b-animation-speed-xs);
+  @include transitionDuration($b-animation-speed-xs);
+}
+
+.speed-sm {
+  @include animationDuration($b-animation-speed-sm);
+  @include transitionDuration($b-animation-speed-sm);
+}
+
+.speed,
+.speed-md {
+  @include animationDuration($b-animation-speed);
+  @include transitionDuration($b-animation-speed);
+}
+
+.speed-lg {
+  @include animationDuration($b-animation-speed-lg);
+  @include transitionDuration($b-animation-speed-lg);
+}
+
+.speed-xl {
+  @include animationDuration($b-animation-speed-xl);
+  @include transitionDuration($b-animation-speed-xl);
+}
+
+/*--------------------------------------
+  Animation timing function
+--------------------------------------*/
+.linear {
+  animation-timing-function: $b-animation-timing-linear;
+  transition-timing-function: $b-animation-timing-linear;
+}
+
+.ease {
+  animation-timing-function: $b-animation-timing-ease;
+  transition-timing-function: $b-animation-timing-ease;
+}
+
+.ease-in {
+  animation-timing-function: $b-animation-timing-ease-in;
+  transition-timing-function: $b-animation-timing-ease-in;
+}
+
+.ease-out {
+  animation-timing-function: $b-animation-timing-ease-out;
+  transition-timing-function: $b-animation-timing-ease-out;
+}
+
+.ease-in-out {
+  animation-timing-function: $b-animation-timing-ease-in-out;
+  transition-timing-function: $b-animation-timing-ease-in-out;
+}
+
+/*--------------------------------------
+  Animation iteration count
+--------------------------------------*/
+.infinite {
+  animation-iteration-count: infinite;
+}
+
+/*--------------------------------------
+  Fade In
+--------------------------------------*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation-name: fadeIn;
+}
+
+/*--------------------------------------
+  Fade In Top
+--------------------------------------*/
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fade-in-top {
+  animation-name: fadeInTop;
+}
+
+/*--------------------------------------
+  Fade In Bottom
+--------------------------------------*/
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+.fade-in-bottom {
+  animation-name: fadeInBottom;
+}
+
+/*--------------------------------------
+  Fade In Left
+--------------------------------------*/
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fade-in-left {
+  animation-name: fadeInLeft;
+}
+
+/*--------------------------------------
+  Fade In Right
+--------------------------------------*/
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fade-in-right {
+  animation-name: fadeInRight;
+}
+
+/*--------------------------------------
+  Fade In Right
+--------------------------------------*/
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+  
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-in-out {
+  animation-name: fadeInOut;
+}
+
+/*--------------------------------------
+  Fade Out
+--------------------------------------*/
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  animation-name: fadeOut;
+}
+
+/*--------------------------------------
+  Fade Out Top
+--------------------------------------*/
+@keyframes fadeOutTop {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.fade-out-top {
+  animation-name: fadeOutTop;
+}
+
+/*--------------------------------------
+  Fade Out Bottom
+--------------------------------------*/
+@keyframes fadeOutBottom {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.fade-out-bottom {
+  animation-name: fadeOutBottom;
+}
+
+/*--------------------------------------
+  Fade Out Left
+--------------------------------------*/
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.fade-out-left {
+  animation-name: fadeOutLeft;
+}
+
+/*--------------------------------------
+  Fade Out Right
+--------------------------------------*/
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.fade-out-right {
+  animation-name: fadeOutRight;
+}
+
+/*--------------------------------------
+  Slide In Top
+--------------------------------------*/
+@keyframes slideInTop {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slide-in-top {
+  animation-name: slideInTop;
+}
+
+/*--------------------------------------
+  Slide In Bottom
+--------------------------------------*/
+@keyframes slideInBottom {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slide-in-bottom {
+  animation-name: slideInBottom;
+}
+
+/*--------------------------------------
+  Slide In Left
+--------------------------------------*/
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slide-in-left {
+  animation-name: slideInLeft;
+}
+
+/*--------------------------------------
+  Slide In Right
+--------------------------------------*/
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slide-in-right {
+  animation-name: slideInRight;
+}
+
+/*--------------------------------------
+  Slide Out Top
+--------------------------------------*/
+@keyframes slideOutTop {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.slide-out-top {
+  animation-name: slideOutTop;
+}
+
+/*--------------------------------------
+  Slide Out Bottom
+--------------------------------------*/
+@keyframes slideOutBottom {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.slide-out-bottom {
+  animation-name: slideOutBottom;
+}
+
+/*--------------------------------------
+  Slide Out Left
+--------------------------------------*/
+@keyframes slideOutLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.slide-out-left {
+  animation-name: slideOutLeft;
+}
+
+/*--------------------------------------
+  Slide Out Right
+--------------------------------------*/
+@keyframes slideOutRight {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.slide-out-right {
+  animation-name: slideOutRight;
+}
+
+/*--------------------------------------
+  Rotate
+--------------------------------------*/
+@keyframes rotate {
+  from {
+    transform-origin: center;
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform-origin: center;
+    transform: rotate(1turn);
+  }
+}
+
+.rotate {
+  animation-name: rotate;
+}
+
+/*--------------------------------------
+  Rotate In
+--------------------------------------*/
+@keyframes rotateIn {
+  from {
+    transform-origin: center;
+    transform: rotate(-360deg);
+    opacity: 0;
+  }
+
+  to {
+    transform-origin: center;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.rotate-in {
+  animation-name: rotateIn;
+}
+
+/*--------------------------------------
+  Rotate Out
+--------------------------------------*/
+@keyframes rotateOut {
+  from {
+    transform-origin: center;
+    transform: none;
+    opacity: 1;
+  }
+
+  to {
+    transform-origin: center;
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.rotate-out {
+  animation-name: rotateOut;
+}
+
+/*--------------------------------------
+  Scale In
+--------------------------------------*/
+.scale-in,
+.scale-in--hover:hover {
+  transform: scale3d(0, 0, 0);
+}
+
+/*--------------------------------------
+  Scale Out
+--------------------------------------*/
+.scale-out-xs,
+.scale-out-xs--hover:hover {
+  transform: scale(1.125);
+}
+
+.scale-out-sm
+.scale-out-sm--hover:hover {
+  transform: scale(1.25);
+}
+
+.scale-out,
+.scale-out--hover:hover {
+  transform: scale(1.5);
+}
+
+.scale-out-lg,
+.scale-out-lg--hover:hover {
+  transform: scale(1.75);
+}
+
+.scale-out-xl,
+.scale-out-xl--hover:hover {
+  transform: scale(2);
+}
+

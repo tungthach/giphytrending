@@ -1,0 +1,39 @@
+/*--------------------------------------
+  Fonts
+--------------------------------------*/
+
+$b-fontFamily-heading:       'Gotham SSm A', 'Gotham SSm B', sans-serif;
+// $b-fontFamily:               'Gotham SSm A', 'Gotham SSm B', sans-serif;
+$b-fontFamily:               'font-family', sans-serif;
+
+/* ----- Font size ----- */
+$b-fontSize-root:            16px;
+$b-fontSize:                 1em;
+$b-fontSize-sm:              87.5%;
+$b-fontSize-xs:              75%;
+
+/* ----- Heading Font size for Desktop ----- */
+$b-fontSize-h1:              px2em(51px) !default;
+$b-fontSize-h2:              px2em(38px) !default;
+$b-fontSize-h3:              px2em(28px) !default;
+$b-fontSize-h4:              px2em(21px) !default;
+$b-fontSize-h5:              px2em(16px) !default;
+$b-fontSize-h6:              px2em(16px) !default;
+
+/* ----- Heading Font size for Mobile ----- */
+$b-fontSize-h1-mobile:       px2em(29px) !default;
+$b-fontSize-h2-mobile:       px2em(24px) !default;
+$b-fontSize-h3-mobile:       px2em(20px) !default;
+$b-fontSize-h4-mobile:       px2em(17px) !default;
+$b-fontSize-h5-mobile:       px2em(14px) !default;
+$b-fontSize-h6-mobile:       px2em(14px) !default;
+
+/* ----- Line height ----- */
+$b-lineHeight:               1.5;
+$b-lineHeight-heading:       1.25;
+
+/* ----- Font weight ----- */
+$b-fontWeight-light:				200;
+$b-fontWeight-book:         300;
+$b-fontWeight-medium:       400;
+$b-fontWeight-bold:         700;

@@ -1,0 +1,13 @@
+@import 'style/foundation/config';
+
+.example {
+  &__tabs {
+    > div {
+      background-color: transparent!important;
+    }
+  }
+
+  &__tab {
+    color: $c-blk!important;
+  }
+}

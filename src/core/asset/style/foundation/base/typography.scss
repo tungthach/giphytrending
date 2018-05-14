@@ -1,0 +1,18 @@
+.text {
+  &-sm {
+    font-size: $b-fontSize-sm;
+  }
+
+  &-xs {
+    font-size: $b-fontSize-xs;
+  }
+}
+
+.header {
+  font-size: 36px;
+  padding: $b-space-xs 0;
+}
+
+body {
+  font-family: $b-fontFamily;
+}
