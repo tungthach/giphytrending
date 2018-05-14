@@ -7,6 +7,7 @@ import { appReducer } from './app.reducer';
 
 import { homeRoute } from '../home/home.route';
 import { exampleRoute } from '../example/example.route';
+import { dashboardRoute } from '../dashboard/dashboard.route';
 import { notFoundRoute } from '../not-found/not-found.route';
 
 /**
@@ -28,6 +29,7 @@ export const appRoute = {
   routes: [
     homeRoute,
     exampleRoute,
+    dashboardRoute,
     notFoundRoute
   ]
 };

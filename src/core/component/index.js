@@ -5,3 +5,4 @@ export { connectUrl } from './connect-url';
 export { Intl, IntlMessage, IntlProvider, intlShape } from './intl';
 export { renderRoutes } from './route';
 export { Static } from './static';
+export { Loader } from './loader';
